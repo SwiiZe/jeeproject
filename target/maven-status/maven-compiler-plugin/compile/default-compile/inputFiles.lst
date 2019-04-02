@@ -1,0 +1,10 @@
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/bl/concrete/UserAccountManager.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/config/WebInitializer.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/domain/model/UserAccount.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/controllers/LoginServlet.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/domain/model/LoginDAO.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/services/LoginService.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/domain/model/LoginBean.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/config/AppConfig.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/controllers/DefaultController.java
+/Users/irteza/Desktop/S8/JavaJEE/jeeproject/src/main/java/jeeproject/domain/repository/UserAccountRepository.java

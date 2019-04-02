@@ -20,14 +20,18 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
+import javax.ws.rs.core.Application;
+
+import java.util.Set;
 
 @Configuration
-@ComponentScan({"com.restowa.controllers", "com.restowa.bl.concrete"})
+@ComponentScan({"jeeproject.controllers", "jeeproject.bl.concrete"})
 @EnableWebMvc
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
-@EnableJpaRepositories("com.restowa.domain.repository")
-public class AppConfig implements WebMvcConfigurer {
+@EnableJpaRepositories("jeeproject.domain.repository")
+@javax.ws.rs.ApplicationPath("services")
+public class AppConfig extends Application implements WebMvcConfigurer {
 
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";
     private static final String PROPERTY_NAME_DATABASE_PASSWORD = "db.password";
@@ -93,5 +97,17 @@ public class AppConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
     }
+    
+    
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new java.util.HashSet<>();
+        addRestResourceClasses(resources);
+        return resources;
+    }
 
+    private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(jeeproject.services.StoreService.class);
+    }
+  
 }

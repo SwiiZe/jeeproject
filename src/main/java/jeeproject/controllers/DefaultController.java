@@ -16,7 +16,7 @@ public class DefaultController {
 //    UserAccountRepository repo;
     
     @Resource
-    UserAccountManager uamanager;
+    UserAccountManager uamanager; 
     
     @RequestMapping(value = "/", method = RequestMethod.GET)
     //@Transactional
@@ -26,8 +26,8 @@ public class DefaultController {
         UserAccount ua = uamanager.getUserAccountById(1);
         
         map.put("msg", "Hello Spring 5 Web MVC!");
-        map.put("userId", ua.getID());
-        map.put("userName", ua.getName());
+        map.put("userId", ua.getId());
+        map.put("userName", ua.getFirstName());
         return "index";
     }
 }
